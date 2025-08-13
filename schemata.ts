@@ -249,9 +249,9 @@ export namespace Relations {
 
     id: string
     type: Relations.Type
-    domain_type: Things.EntityDomain
+    domain_type: Things.EntityDomain | "Relation"
     domain_id: string
-    target_type: Things.EntityDomain
+    target_type: Things.EntityDomain | "Relation"
     target_id: string
   }
 
