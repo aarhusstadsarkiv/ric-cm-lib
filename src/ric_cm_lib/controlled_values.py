@@ -21,7 +21,6 @@ __all__ = [
     "ProductionTechnique",
     "RecordSetType",
     "RecordState",
-    "RelationType",
     "RepresentationType",
     "RuleType",
 ]
