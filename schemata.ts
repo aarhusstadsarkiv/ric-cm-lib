@@ -1,8 +1,8 @@
 // noinspection JSUnusedLocalSymbols,JSUnusedGlobalSymbols
 
-type FreeText = string
-type ModelBasedText = `model:${string}:${string}`
-type RuleBasedText = `rule:${string}:${string}`
+export type FreeText = string
+export type ModelBasedText = `model:${string}:${string}`
+export type RuleBasedText = `rule:${string}:${string}`
 
 export namespace Things {
   export interface Thing {
