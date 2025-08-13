@@ -81,8 +81,7 @@ export namespace Things {
 
     export namespace Groups {
       export interface Group extends Agent {
-        demographic_group: ControlledValues.DemographicGroup  // https://www.ica.org/standards/RiC/ontology#
-        occupation_type: string  // https://www.ica.org/standards/RiC/ontology#
+        demographic_group: ControlledValues.DemographicGroup  // https://www.ica.org/standards/RiC/ontology±#DemographicGroup
       }
 
       export interface Family extends Group {
