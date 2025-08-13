@@ -162,7 +162,7 @@
         "description_of_relation": {
           "$ref": "#/definitions/FreeText"
         },
-        "domain_id": {
+        "domain_identifier": {
           "type": "string"
         },
         "domain_type": {
@@ -208,7 +208,7 @@
             }
           ]
         },
-        "target_id": {
+        "target_identifier": {
           "type": "string"
         },
         "target_type": {

@@ -250,9 +250,9 @@ export namespace Relations {
     id: string
     relation_type: Relations.RelationType
     domain_type: Things.EntityDomain | "Relation"
-    domain_id: string
+    domain_identifier: string
     target_type: Things.EntityDomain | "Relation"
-    target_id: string
+    target_identifier: string
   }
 
   export enum RelationType {
