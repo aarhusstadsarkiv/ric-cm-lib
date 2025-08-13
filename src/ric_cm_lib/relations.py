@@ -1,3 +1,4 @@
+from dataclasses import dataclass
 from enum import Enum
 from typing import Literal
 
@@ -157,6 +158,7 @@ class RelationType(Enum):
     R079i = -79
 
 
+@dataclass
 class Relation:
     certainty_of_relation: FreeText | ModelBasedText  # https://www.ica.org/standards/RiC/ontology#relationCertainty
     date_of_relation: FreeText | ModelBasedText | RuleBasedText  # RA02
