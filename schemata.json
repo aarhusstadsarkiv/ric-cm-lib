@@ -196,7 +196,7 @@
           "type": "string"
         },
         "relation_type": {
-          "$ref": "#/definitions/Relations.Type"
+          "$ref": "#/definitions/Relations.RelationType"
         },
         "source_of_relation": {
           "anyOf": [
@@ -239,7 +239,7 @@
       ],
       "type": "object"
     },
-    "Relations.Type": {
+    "Relations.RelationType": {
       "enum": [
         1,
         2,

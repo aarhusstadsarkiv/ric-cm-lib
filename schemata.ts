@@ -248,14 +248,14 @@ export namespace Relations {
     place_of_relation: string  // RA06
 
     id: string
-    relation_type: Relations.Type
+    relation_type: Relations.RelationType
     domain_type: Things.EntityDomain | "Relation"
     domain_id: string
     target_type: Things.EntityDomain | "Relation"
     target_id: string
   }
 
-  export enum Type {
+  export enum RelationType {
     R001 = 0x1,
     R002 = 0x2,
     R002i = 0x5a,
