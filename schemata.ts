@@ -248,7 +248,7 @@ export namespace Relations {
     place_of_relation: string  // RA06
 
     id: string
-    type: Relations.Type
+    relation_type: Relations.Type
     domain_type: Things.EntityDomain | "Relation"
     domain_id: string
     target_type: Things.EntityDomain | "Relation"
