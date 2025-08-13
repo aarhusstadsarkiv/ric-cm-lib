@@ -160,11 +160,11 @@ class RelationType(Enum):
 
 @dataclass
 class Relation:
-    certainty_of_relation: FreeText | ModelBasedText  # https://www.ica.org/standards/RiC/ontology#relationCertainty
+    certainty_of_relation: FreeText | ModelBasedText
     date_of_relation: FreeText | ModelBasedText | RuleBasedText  # RA02
     description_of_relation: FreeText  # RA03
     identifier_of_relation: FreeText | ModelBasedText | RuleBasedText  # RA04
-    source_of_relation: FreeText | ModelBasedText  # https://www.ica.org/standards/RiC/ontology#relationSource
+    source_of_relation: FreeText | ModelBasedText
     place_of_relation: str  # RA06
 
     relation_type: RelationType
