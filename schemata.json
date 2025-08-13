@@ -1,0 +1,2111 @@
+{
+  "$schema": "http://json-schema.org/draft/2020-12/schema#",
+  "definitions": {
+    "ControlledValues.ActivityType": {
+      "enum": [
+        0
+      ],
+      "type": "integer"
+    },
+    "ControlledValues.CarrierType": {
+      "enum": [
+        0
+      ],
+      "type": "integer"
+    },
+    "ControlledValues.ClassificationType": {
+      "enum": [
+        0
+      ],
+      "type": "integer"
+    },
+    "ControlledValues.ContentType": {
+      "enum": [
+        0
+      ],
+      "type": "integer"
+    },
+    "ControlledValues.CorporateBodyType": {
+      "enum": [
+        0
+      ],
+      "type": "integer"
+    },
+    "ControlledValues.DateQualifier": {
+      "enum": [
+        0
+      ],
+      "type": "integer"
+    },
+    "ControlledValues.DateType": {
+      "enum": [
+        0
+      ],
+      "type": "integer"
+    },
+    "ControlledValues.DemographicGroup": {
+      "enum": [
+        0
+      ],
+      "type": "integer"
+    },
+    "ControlledValues.DocumentaryFormType": {
+      "enum": [
+        0
+      ],
+      "type": "integer"
+    },
+    "ControlledValues.EventType": {
+      "enum": [
+        0
+      ],
+      "type": "integer"
+    },
+    "ControlledValues.FamilyType": {
+      "enum": [
+        0
+      ],
+      "type": "integer"
+    },
+    "ControlledValues.Language": {
+      "enum": [
+        0
+      ],
+      "type": "integer"
+    },
+    "ControlledValues.LegalStatus": {
+      "enum": [
+        0
+      ],
+      "type": "integer"
+    },
+    "ControlledValues.MandateType": {
+      "enum": [
+        0
+      ],
+      "type": "integer"
+    },
+    "ControlledValues.OccupationType": {
+      "enum": [
+        0
+      ],
+      "type": "integer"
+    },
+    "ControlledValues.PlaceType": {
+      "enum": [
+        0
+      ],
+      "type": "integer"
+    },
+    "ControlledValues.ProductionTechnique": {
+      "enum": [
+        0
+      ],
+      "type": "integer"
+    },
+    "ControlledValues.RecordSetType": {
+      "enum": [
+        0
+      ],
+      "type": "integer"
+    },
+    "ControlledValues.RecordState": {
+      "enum": [
+        0
+      ],
+      "type": "integer"
+    },
+    "ControlledValues.RepresentationType": {
+      "enum": [
+        0
+      ],
+      "type": "integer"
+    },
+    "ControlledValues.RuleType": {
+      "enum": [
+        0
+      ],
+      "type": "integer"
+    },
+    "FreeText": {
+      "type": "string"
+    },
+    "ModelBasedText": {
+      "type": "string"
+    },
+    "Relations.Relation": {
+      "additionalProperties": false,
+      "properties": {
+        "certainty_of_relation": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "date_of_relation": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            },
+            {
+              "$ref": "#/definitions/RuleBasedText"
+            }
+          ]
+        },
+        "description_of_relation": {
+          "$ref": "#/definitions/FreeText"
+        },
+        "domain_id": {
+          "type": "string"
+        },
+        "domain_type": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/Things.EntityDomain"
+            },
+            {
+              "const": "Relation",
+              "type": "string"
+            }
+          ]
+        },
+        "id": {
+          "type": "string"
+        },
+        "identifier_of_relation": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            },
+            {
+              "$ref": "#/definitions/RuleBasedText"
+            }
+          ]
+        },
+        "place_of_relation": {
+          "type": "string"
+        },
+        "relation_type": {
+          "$ref": "#/definitions/Relations.Type"
+        },
+        "source_of_relation": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "target_id": {
+          "type": "string"
+        },
+        "target_type": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/Things.EntityDomain"
+            },
+            {
+              "const": "Relation",
+              "type": "string"
+            }
+          ]
+        }
+      },
+      "required": [
+        "certainty_of_relation",
+        "date_of_relation",
+        "description_of_relation",
+        "identifier_of_relation",
+        "source_of_relation",
+        "place_of_relation",
+        "id",
+        "relation_type",
+        "domain_type",
+        "domain_id",
+        "target_type",
+        "target_id"
+      ],
+      "type": "object"
+    },
+    "Relations.Type": {
+      "enum": [
+        1,
+        2,
+        90,
+        3,
+        126,
+        4,
+        162,
+        5,
+        198,
+        6,
+        234,
+        7,
+        270,
+        8,
+        306,
+        9,
+        342,
+        36,
+        1314,
+        37,
+        1350,
+        38,
+        1386,
+        39,
+        1422,
+        40,
+        1458,
+        41,
+        1494,
+        42,
+        1530,
+        43,
+        1566,
+        44,
+        1602,
+        45,
+        1638,
+        72,
+        2610,
+        73,
+        2646,
+        74,
+        75,
+        76,
+        2754,
+        77,
+        2790,
+        78,
+        2826,
+        79,
+        2862,
+        80,
+        2898,
+        81,
+        2934,
+        108,
+        3906,
+        109,
+        3942,
+        110,
+        3978,
+        111,
+        4014,
+        112,
+        113,
+        114,
+        4122,
+        115,
+        4158,
+        116,
+        4194,
+        117,
+        4230,
+        144,
+        5202,
+        145,
+        5238,
+        146,
+        5274,
+        148,
+        149,
+        5382,
+        150,
+        151,
+        152,
+        153,
+        180,
+        6498,
+        181,
+        182,
+        183,
+        6606,
+        184,
+        6642,
+        185,
+        6678,
+        186,
+        6714,
+        187,
+        6750,
+        188,
+        6786,
+        189,
+        6822,
+        216,
+        7794,
+        217,
+        7830,
+        218,
+        7866,
+        219,
+        7902,
+        220,
+        7938,
+        221,
+        7974,
+        222,
+        8010,
+        223,
+        8046,
+        224,
+        8082,
+        225,
+        8118,
+        252,
+        9090,
+        253,
+        9126,
+        254,
+        9162,
+        255,
+        9198,
+        256,
+        9234,
+        257,
+        9270,
+        258,
+        9306,
+        259,
+        260,
+        261,
+        9414
+      ],
+      "type": "number"
+    },
+    "RuleBasedText": {
+      "type": "string"
+    },
+    "Things.Agents.Agent": {
+      "additionalProperties": false,
+      "properties": {
+        "general_description": {
+          "$ref": "#/definitions/FreeText"
+        },
+        "history": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "id": {
+          "type": "string"
+        },
+        "identifier": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            },
+            {
+              "$ref": "#/definitions/RuleBasedText"
+            }
+          ]
+        },
+        "language": {
+          "$ref": "#/definitions/ControlledValues.Language"
+        },
+        "legal_status": {
+          "$ref": "#/definitions/ControlledValues.LegalStatus"
+        },
+        "name": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        }
+      },
+      "required": [
+        "general_description",
+        "history",
+        "id",
+        "identifier",
+        "language",
+        "legal_status",
+        "name"
+      ],
+      "type": "object"
+    },
+    "Things.Agents.Groups.CorporateBody": {
+      "additionalProperties": false,
+      "properties": {
+        "corporate_body_type": {
+          "$ref": "#/definitions/ControlledValues.CorporateBodyType"
+        },
+        "demographic_group": {
+          "$ref": "#/definitions/ControlledValues.DemographicGroup"
+        },
+        "general_description": {
+          "$ref": "#/definitions/FreeText"
+        },
+        "history": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "id": {
+          "type": "string"
+        },
+        "identifier": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            },
+            {
+              "$ref": "#/definitions/RuleBasedText"
+            }
+          ]
+        },
+        "language": {
+          "$ref": "#/definitions/ControlledValues.Language"
+        },
+        "legal_status": {
+          "$ref": "#/definitions/ControlledValues.LegalStatus"
+        },
+        "name": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        }
+      },
+      "required": [
+        "corporate_body_type",
+        "demographic_group",
+        "general_description",
+        "history",
+        "id",
+        "identifier",
+        "language",
+        "legal_status",
+        "name"
+      ],
+      "type": "object"
+    },
+    "Things.Agents.Groups.Family": {
+      "additionalProperties": false,
+      "properties": {
+        "demographic_group": {
+          "$ref": "#/definitions/ControlledValues.DemographicGroup"
+        },
+        "family_type": {
+          "$ref": "#/definitions/ControlledValues.FamilyType"
+        },
+        "general_description": {
+          "$ref": "#/definitions/FreeText"
+        },
+        "history": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "id": {
+          "type": "string"
+        },
+        "identifier": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            },
+            {
+              "$ref": "#/definitions/RuleBasedText"
+            }
+          ]
+        },
+        "language": {
+          "$ref": "#/definitions/ControlledValues.Language"
+        },
+        "legal_status": {
+          "$ref": "#/definitions/ControlledValues.LegalStatus"
+        },
+        "name": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        }
+      },
+      "required": [
+        "demographic_group",
+        "family_type",
+        "general_description",
+        "history",
+        "id",
+        "identifier",
+        "language",
+        "legal_status",
+        "name"
+      ],
+      "type": "object"
+    },
+    "Things.Agents.Groups.Group": {
+      "additionalProperties": false,
+      "properties": {
+        "demographic_group": {
+          "$ref": "#/definitions/ControlledValues.DemographicGroup"
+        },
+        "general_description": {
+          "$ref": "#/definitions/FreeText"
+        },
+        "history": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "id": {
+          "type": "string"
+        },
+        "identifier": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            },
+            {
+              "$ref": "#/definitions/RuleBasedText"
+            }
+          ]
+        },
+        "language": {
+          "$ref": "#/definitions/ControlledValues.Language"
+        },
+        "legal_status": {
+          "$ref": "#/definitions/ControlledValues.LegalStatus"
+        },
+        "name": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        }
+      },
+      "required": [
+        "demographic_group",
+        "general_description",
+        "history",
+        "id",
+        "identifier",
+        "language",
+        "legal_status",
+        "name"
+      ],
+      "type": "object"
+    },
+    "Things.Agents.Mechanism": {
+      "additionalProperties": false,
+      "properties": {
+        "general_description": {
+          "$ref": "#/definitions/FreeText"
+        },
+        "history": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "id": {
+          "type": "string"
+        },
+        "identifier": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            },
+            {
+              "$ref": "#/definitions/RuleBasedText"
+            }
+          ]
+        },
+        "language": {
+          "$ref": "#/definitions/ControlledValues.Language"
+        },
+        "legal_status": {
+          "$ref": "#/definitions/ControlledValues.LegalStatus"
+        },
+        "name": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "technical_characteristics": {
+          "$ref": "#/definitions/FreeText"
+        }
+      },
+      "required": [
+        "general_description",
+        "history",
+        "id",
+        "identifier",
+        "language",
+        "legal_status",
+        "name",
+        "technical_characteristics"
+      ],
+      "type": "object"
+    },
+    "Things.Agents.Person": {
+      "additionalProperties": false,
+      "properties": {
+        "demographic_group": {
+          "$ref": "#/definitions/ControlledValues.DemographicGroup"
+        },
+        "general_description": {
+          "$ref": "#/definitions/FreeText"
+        },
+        "history": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "id": {
+          "type": "string"
+        },
+        "identifier": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            },
+            {
+              "$ref": "#/definitions/RuleBasedText"
+            }
+          ]
+        },
+        "language": {
+          "$ref": "#/definitions/ControlledValues.Language"
+        },
+        "legal_status": {
+          "$ref": "#/definitions/ControlledValues.LegalStatus"
+        },
+        "name": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "occupation_type": {
+          "$ref": "#/definitions/ControlledValues.OccupationType"
+        }
+      },
+      "required": [
+        "demographic_group",
+        "general_description",
+        "history",
+        "id",
+        "identifier",
+        "language",
+        "legal_status",
+        "name",
+        "occupation_type"
+      ],
+      "type": "object"
+    },
+    "Things.Agents.Position": {
+      "additionalProperties": false,
+      "properties": {
+        "general_description": {
+          "$ref": "#/definitions/FreeText"
+        },
+        "history": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "id": {
+          "type": "string"
+        },
+        "identifier": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            },
+            {
+              "$ref": "#/definitions/RuleBasedText"
+            }
+          ]
+        },
+        "language": {
+          "$ref": "#/definitions/ControlledValues.Language"
+        },
+        "legal_status": {
+          "$ref": "#/definitions/ControlledValues.LegalStatus"
+        },
+        "name": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        }
+      },
+      "required": [
+        "general_description",
+        "history",
+        "id",
+        "identifier",
+        "language",
+        "legal_status",
+        "name"
+      ],
+      "type": "object"
+    },
+    "Things.Dates.Date": {
+      "additionalProperties": false,
+      "properties": {
+        "date_qualifier": {
+          "$ref": "#/definitions/ControlledValues.DateQualifier"
+        },
+        "date_type": {
+          "$ref": "#/definitions/ControlledValues.DateType"
+        },
+        "expressed_date": {
+          "$ref": "#/definitions/ModelBasedText"
+        },
+        "general_description": {
+          "$ref": "#/definitions/FreeText"
+        },
+        "id": {
+          "type": "string"
+        },
+        "identifier": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            },
+            {
+              "$ref": "#/definitions/RuleBasedText"
+            }
+          ]
+        },
+        "name": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "normalized_date": {
+          "$ref": "#/definitions/RuleBasedText"
+        }
+      },
+      "required": [
+        "date_qualifier",
+        "date_type",
+        "expressed_date",
+        "general_description",
+        "id",
+        "identifier",
+        "name",
+        "normalized_date"
+      ],
+      "type": "object"
+    },
+    "Things.EntityDomain": {
+      "enum": [
+        "RecordSet",
+        "Record",
+        "RecordPart",
+        "Instantiation",
+        "Person",
+        "Position",
+        "Mechanism",
+        "Family",
+        "CorporateBody",
+        "Event",
+        "Activity",
+        "Rule",
+        "Mandate",
+        "Date",
+        "Place"
+      ],
+      "type": "string"
+    },
+    "Things.Events.Activity": {
+      "additionalProperties": false,
+      "properties": {
+        "activity_type": {
+          "$ref": "#/definitions/ControlledValues.ActivityType"
+        },
+        "event_type": {
+          "$ref": "#/definitions/ControlledValues.EventType"
+        },
+        "general_description": {
+          "$ref": "#/definitions/FreeText"
+        },
+        "history": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "id": {
+          "type": "string"
+        },
+        "identifier": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            },
+            {
+              "$ref": "#/definitions/RuleBasedText"
+            }
+          ]
+        },
+        "name": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        }
+      },
+      "required": [
+        "activity_type",
+        "event_type",
+        "general_description",
+        "history",
+        "id",
+        "identifier",
+        "name"
+      ],
+      "type": "object"
+    },
+    "Things.Events.Event": {
+      "additionalProperties": false,
+      "properties": {
+        "event_type": {
+          "$ref": "#/definitions/ControlledValues.EventType"
+        },
+        "general_description": {
+          "$ref": "#/definitions/FreeText"
+        },
+        "history": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "id": {
+          "type": "string"
+        },
+        "identifier": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            },
+            {
+              "$ref": "#/definitions/RuleBasedText"
+            }
+          ]
+        },
+        "name": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        }
+      },
+      "required": [
+        "event_type",
+        "general_description",
+        "history",
+        "id",
+        "identifier",
+        "name"
+      ],
+      "type": "object"
+    },
+    "Things.Instantiations.Instantiation": {
+      "additionalProperties": false,
+      "properties": {
+        "authenticity_note": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "carrier_extent": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "carrier_type": {
+          "$ref": "#/definitions/ControlledValues.CarrierType"
+        },
+        "conditions_of_access": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "conditions_of_use": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "general_description": {
+          "$ref": "#/definitions/FreeText"
+        },
+        "history": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "id": {
+          "type": "string"
+        },
+        "identifier": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            },
+            {
+              "$ref": "#/definitions/RuleBasedText"
+            }
+          ]
+        },
+        "instantiation_extent": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "name": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "physical_characteristics_note": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "production_technique": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ControlledValues.ProductionTechnique"
+            }
+          ]
+        },
+        "quality_of_representation_note": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "representation_type": {
+          "$ref": "#/definitions/ControlledValues.RepresentationType"
+        },
+        "structure": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        }
+      },
+      "required": [
+        "authenticity_note",
+        "carrier_extent",
+        "carrier_type",
+        "conditions_of_access",
+        "conditions_of_use",
+        "general_description",
+        "history",
+        "id",
+        "identifier",
+        "instantiation_extent",
+        "name",
+        "physical_characteristics_note",
+        "production_technique",
+        "quality_of_representation_note",
+        "representation_type",
+        "structure"
+      ],
+      "type": "object"
+    },
+    "Things.Places.Place": {
+      "additionalProperties": false,
+      "properties": {
+        "coordinates": {
+          "additionalProperties": false,
+          "properties": {
+            "height": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "latitude": {
+              "type": "number"
+            },
+            "longitude": {
+              "type": "number"
+            },
+            "standard": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "latitude",
+            "longitude",
+            "height",
+            "standard"
+          ],
+          "type": "object"
+        },
+        "general_description": {
+          "$ref": "#/definitions/FreeText"
+        },
+        "history": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "id": {
+          "type": "string"
+        },
+        "identifier": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            },
+            {
+              "$ref": "#/definitions/RuleBasedText"
+            }
+          ]
+        },
+        "location": {
+          "$ref": "#/definitions/FreeText"
+        },
+        "name": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "place_type": {
+          "$ref": "#/definitions/ControlledValues.PlaceType"
+        }
+      },
+      "required": [
+        "coordinates",
+        "general_description",
+        "history",
+        "id",
+        "identifier",
+        "location",
+        "name",
+        "place_type"
+      ],
+      "type": "object"
+    },
+    "Things.RecordsResources.Record": {
+      "additionalProperties": false,
+      "properties": {
+        "authenticity_note": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "classification": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/ControlledValues.ClassificationType"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "conditions_of_access": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "conditions_of_use": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "content_type": {
+          "$ref": "#/definitions/ControlledValues.ContentType"
+        },
+        "documentary_form_type": {
+          "$ref": "#/definitions/ControlledValues.DocumentaryFormType"
+        },
+        "general_description": {
+          "$ref": "#/definitions/FreeText"
+        },
+        "history": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "id": {
+          "type": "string"
+        },
+        "identifier": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            },
+            {
+              "$ref": "#/definitions/RuleBasedText"
+            }
+          ]
+        },
+        "integrity_note": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "language": {
+          "$ref": "#/definitions/ControlledValues.Language"
+        },
+        "legal_status": {
+          "$ref": "#/definitions/ControlledValues.LegalStatus"
+        },
+        "name": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "record_resource_extent": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "scope_and_content": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "state": {
+          "$ref": "#/definitions/ControlledValues.RecordState"
+        },
+        "structure": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        }
+      },
+      "required": [
+        "authenticity_note",
+        "classification",
+        "conditions_of_access",
+        "conditions_of_use",
+        "content_type",
+        "documentary_form_type",
+        "general_description",
+        "history",
+        "id",
+        "identifier",
+        "integrity_note",
+        "language",
+        "legal_status",
+        "name",
+        "record_resource_extent",
+        "scope_and_content",
+        "state",
+        "structure"
+      ],
+      "type": "object"
+    },
+    "Things.RecordsResources.RecordPart": {
+      "additionalProperties": false,
+      "properties": {
+        "authenticity_note": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "classification": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/ControlledValues.ClassificationType"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "conditions_of_access": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "conditions_of_use": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "content_type": {
+          "$ref": "#/definitions/ControlledValues.ContentType"
+        },
+        "documentary_form_type": {
+          "$ref": "#/definitions/ControlledValues.DocumentaryFormType"
+        },
+        "general_description": {
+          "$ref": "#/definitions/FreeText"
+        },
+        "history": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "id": {
+          "type": "string"
+        },
+        "identifier": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            },
+            {
+              "$ref": "#/definitions/RuleBasedText"
+            }
+          ]
+        },
+        "integrity_note": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "language": {
+          "$ref": "#/definitions/ControlledValues.Language"
+        },
+        "legal_status": {
+          "$ref": "#/definitions/ControlledValues.LegalStatus"
+        },
+        "name": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "record_resource_extent": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "scope_and_content": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "state": {
+          "$ref": "#/definitions/ControlledValues.RecordState"
+        },
+        "structure": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        }
+      },
+      "required": [
+        "authenticity_note",
+        "classification",
+        "conditions_of_access",
+        "conditions_of_use",
+        "content_type",
+        "documentary_form_type",
+        "general_description",
+        "history",
+        "id",
+        "identifier",
+        "integrity_note",
+        "language",
+        "legal_status",
+        "name",
+        "record_resource_extent",
+        "scope_and_content",
+        "state",
+        "structure"
+      ],
+      "type": "object"
+    },
+    "Things.RecordsResources.RecordResource": {
+      "additionalProperties": false,
+      "properties": {
+        "authenticity_note": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "classification": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/ControlledValues.ClassificationType"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "conditions_of_access": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "conditions_of_use": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "content_type": {
+          "$ref": "#/definitions/ControlledValues.ContentType"
+        },
+        "general_description": {
+          "$ref": "#/definitions/FreeText"
+        },
+        "history": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "id": {
+          "type": "string"
+        },
+        "identifier": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            },
+            {
+              "$ref": "#/definitions/RuleBasedText"
+            }
+          ]
+        },
+        "integrity_note": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "language": {
+          "$ref": "#/definitions/ControlledValues.Language"
+        },
+        "legal_status": {
+          "$ref": "#/definitions/ControlledValues.LegalStatus"
+        },
+        "name": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "record_resource_extent": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "scope_and_content": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "state": {
+          "$ref": "#/definitions/ControlledValues.RecordState"
+        },
+        "structure": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        }
+      },
+      "required": [
+        "authenticity_note",
+        "classification",
+        "conditions_of_access",
+        "conditions_of_use",
+        "content_type",
+        "general_description",
+        "history",
+        "id",
+        "identifier",
+        "integrity_note",
+        "language",
+        "legal_status",
+        "name",
+        "record_resource_extent",
+        "scope_and_content",
+        "state",
+        "structure"
+      ],
+      "type": "object"
+    },
+    "Things.RecordsResources.RecordSet": {
+      "additionalProperties": false,
+      "properties": {
+        "accruals": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "authenticity_note": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "classification": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/ControlledValues.ClassificationType"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "conditions_of_access": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "conditions_of_use": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "content_type": {
+          "$ref": "#/definitions/ControlledValues.ContentType"
+        },
+        "general_description": {
+          "$ref": "#/definitions/FreeText"
+        },
+        "history": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "id": {
+          "type": "string"
+        },
+        "identifier": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            },
+            {
+              "$ref": "#/definitions/RuleBasedText"
+            }
+          ]
+        },
+        "integrity_note": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "language": {
+          "$ref": "#/definitions/ControlledValues.Language"
+        },
+        "legal_status": {
+          "$ref": "#/definitions/ControlledValues.LegalStatus"
+        },
+        "name": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "record_resource_extent": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "record_set_type": {
+          "$ref": "#/definitions/ControlledValues.RecordSetType"
+        },
+        "scope_and_content": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "state": {
+          "$ref": "#/definitions/ControlledValues.RecordState"
+        },
+        "structure": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        }
+      },
+      "required": [
+        "accruals",
+        "authenticity_note",
+        "classification",
+        "conditions_of_access",
+        "conditions_of_use",
+        "content_type",
+        "general_description",
+        "history",
+        "id",
+        "identifier",
+        "integrity_note",
+        "language",
+        "legal_status",
+        "name",
+        "record_resource_extent",
+        "record_set_type",
+        "scope_and_content",
+        "state",
+        "structure"
+      ],
+      "type": "object"
+    },
+    "Things.Rules.Mandate": {
+      "additionalProperties": false,
+      "properties": {
+        "general_description": {
+          "$ref": "#/definitions/FreeText"
+        },
+        "history": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "id": {
+          "type": "string"
+        },
+        "identifier": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            },
+            {
+              "$ref": "#/definitions/RuleBasedText"
+            }
+          ]
+        },
+        "mandate_type": {
+          "$ref": "#/definitions/ControlledValues.MandateType"
+        },
+        "name": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "rule_type": {
+          "$ref": "#/definitions/ControlledValues.RuleType"
+        }
+      },
+      "required": [
+        "general_description",
+        "history",
+        "id",
+        "identifier",
+        "mandate_type",
+        "name",
+        "rule_type"
+      ],
+      "type": "object"
+    },
+    "Things.Rules.Rule": {
+      "additionalProperties": false,
+      "properties": {
+        "general_description": {
+          "$ref": "#/definitions/FreeText"
+        },
+        "history": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "id": {
+          "type": "string"
+        },
+        "identifier": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            },
+            {
+              "$ref": "#/definitions/RuleBasedText"
+            }
+          ]
+        },
+        "name": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        },
+        "rule_type": {
+          "$ref": "#/definitions/ControlledValues.RuleType"
+        }
+      },
+      "required": [
+        "general_description",
+        "history",
+        "id",
+        "identifier",
+        "name",
+        "rule_type"
+      ],
+      "type": "object"
+    },
+    "Things.Thing": {
+      "additionalProperties": false,
+      "properties": {
+        "general_description": {
+          "$ref": "#/definitions/FreeText"
+        },
+        "id": {
+          "type": "string"
+        },
+        "identifier": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            },
+            {
+              "$ref": "#/definitions/RuleBasedText"
+            }
+          ]
+        },
+        "name": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/FreeText"
+            },
+            {
+              "$ref": "#/definitions/ModelBasedText"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "identifier",
+        "name",
+        "general_description"
+      ],
+      "type": "object"
+    }
+  }
+}
+
