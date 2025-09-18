@@ -12,14 +12,18 @@ __all__ = [
 
 @dataclass
 class Group(Agent):
-    demographic_group: controlled_values.DemographicGroup
+    demographic_group: (
+        controlled_values.DemographicGroup
+    )  # https://www.ica.org/standards/RiC/ontology±#DemographicGroup
 
 
 @dataclass
 class Family(Group):
-    family_type: controlled_values.FamilyType
+    family_type: controlled_values.FamilyType  # https://www.ica.org/standards/RiC/ontology#FamilyType
 
 
 @dataclass
 class CorporateBody(Group):
-    corporate_body_type: controlled_values.CorporateBodyType
+    corporate_body_type: (
+        controlled_values.CorporateBodyType
+    )  # https://www.ica.org/standards/RiC/ontology#CorporateBodyType

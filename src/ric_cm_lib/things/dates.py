@@ -11,7 +11,7 @@ __all__ = ["Date"]
 
 @dataclass
 class Date(Thing):
-    date_qualifier: controlled_values.DateQualifier
-    date_type: controlled_values.DateType
-    expressed_date: ModelBasedText
-    normalized_date: RuleBasedText
+    date_qualifier: controlled_values.DateQualifier  # https://www.ica.org/standards/RiC/ontology#dateQualifier
+    date_type: controlled_values.DateType  # https://www.ica.org/standards/RiC/ontology#DateType
+    expressed_date: ModelBasedText  # https://www.ica.org/standards/RiC/ontology#expressedDate
+    normalized_date: RuleBasedText  # https://www.ica.org/standards/RiC/ontology#normalizedDateValue

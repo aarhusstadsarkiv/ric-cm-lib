@@ -21,7 +21,7 @@ class Coordinates(Thing):
 
 @dataclass
 class Place(Thing):
-    coordinates: Coordinates
-    history: FreeText | ModelBasedText
-    location: FreeText
-    place_type: controlled_values.PlaceType
+    coordinates: Coordinates  # https://www.ica.org/standards/RiC/ontology#Coordinates
+    history: FreeText | ModelBasedText  # https://www.ica.org/standards/RiC/ontology#history
+    location: FreeText  # https://www.ica.org/standards/RiC/ontology#location
+    place_type: controlled_values.PlaceType  # https://www.ica.org/standards/RiC/ontology#PlaceType

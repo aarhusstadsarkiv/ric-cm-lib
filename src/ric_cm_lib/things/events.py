@@ -14,10 +14,10 @@ __all__ = [
 
 @dataclass
 class Event(Thing):
-    event_type: controlled_values.EventType
-    history: FreeText | ModelBasedText
+    event_type: controlled_values.EventType  # https://www.ica.org/standards/RiC/ontology#EventType
+    history: FreeText | ModelBasedText  # https://www.ica.org/standards/RiC/ontology#history
 
 
 @dataclass
 class Activity(Event):
-    activity_type: controlled_values.ActivityType
+    activity_type: controlled_values.ActivityType  # https://www.ica.org/standards/RiC/ontology#ActivityType

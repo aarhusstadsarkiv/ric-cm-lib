@@ -9,6 +9,6 @@ __all__ = ["Thing"]
 
 @dataclass
 class Thing:
-    identifier: FreeText | ModelBasedText | RuleBasedText
-    name: FreeText | ModelBasedText
-    general_description: FreeText
+    identifier: FreeText | ModelBasedText | RuleBasedText  # https://www.ica.org/standards/RiC/ontology#identifier
+    name: FreeText | ModelBasedText  # https://www.ica.org/standards/RiC/ontology#name
+    general_description: FreeText  # https://www.ica.org/standards/RiC/ontology#generalDescription

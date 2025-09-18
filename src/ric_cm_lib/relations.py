@@ -845,11 +845,11 @@ _broad: dict[RelationType, list[RelationType]] = {
 
 @dataclass
 class Relation:
-    certainty_of_relation: FreeText | ModelBasedText
+    certainty_of_relation: FreeText | ModelBasedText  # https://www.ica.org/standards/RiC/ontology#relationCertainty
     date_of_relation: FreeText | ModelBasedText | RuleBasedText  # RA02
     description_of_relation: FreeText  # RA03
     identifier_of_relation: FreeText | ModelBasedText | RuleBasedText  # RA04
-    source_of_relation: FreeText | ModelBasedText
+    source_of_relation: FreeText | ModelBasedText  # https://www.ica.org/standards/RiC/ontology#relationSource
     place_of_relation: str  # RA06
 
     relation_type: RelationType
