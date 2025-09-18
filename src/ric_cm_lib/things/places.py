@@ -1,3 +1,5 @@
+from dataclasses import dataclass
+
 from ric_cm_lib import controlled_values
 from ric_cm_lib.things.thing import Thing
 from ric_cm_lib.types import FreeText
@@ -9,6 +11,7 @@ __all__ = [
 ]
 
 
+@dataclass
 class Coordinates(Thing):
     latitude: float
     longitude: float
@@ -16,8 +19,9 @@ class Coordinates(Thing):
     standard: str | None
 
 
+@dataclass
 class Place(Thing):
-    coordinates: Coordinates  # https://www.ica.org/standards/RiC/ontology#Coordinates
-    history: FreeText | ModelBasedText  # https://www.ica.org/standards/RiC/ontology#history
-    location: FreeText  # https://www.ica.org/standards/RiC/ontology#location
-    place_type: controlled_values.PlaceType  # https://www.ica.org/standards/RiC/ontology#PlaceType
+    coordinates: Coordinates
+    history: FreeText | ModelBasedText
+    location: FreeText
+    place_type: controlled_values.PlaceType
