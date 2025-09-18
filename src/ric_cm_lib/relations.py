@@ -92,6 +92,7 @@ class RelationType(Enum):
     R041i = -41
     R042 = 42
     R042i = -42
+    R043 = 43
     R044 = 44
     R045 = 45
     R045i = -45
