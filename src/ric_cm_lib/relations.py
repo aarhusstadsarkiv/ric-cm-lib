@@ -174,6 +174,7 @@ class RelationType(Enum):
     :ivar R086: RiC-R086
     :ivar R086i: RiC-R086i
     """
+
     R001 = 1
     R002 = 2
     R002i = -2
@@ -424,7 +425,6 @@ _inverse: dict[RelationType, RelationType] = {
     RelationType.R084i: RelationType.R084,
     RelationType.R085i: RelationType.R085,
     RelationType.R086i: RelationType.R086,
-
     RelationType.R002: RelationType.R002i,
     RelationType.R003: RelationType.R003i,
     RelationType.R004: RelationType.R004i,
