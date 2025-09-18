@@ -184,6 +184,13 @@ class RelationType(Enum):
     def broader(self) -> list["RelationType"]:
         return _broad.get(self, [])
 
+    @property
+    def tree(self) -> list["RelationType"]:
+        tree = [self]
+        while parents := tree[0].broader:
+            tree.insert(0, sorted(parents, key=lambda r: r.value)[0])
+        return tree
+
 
 _inverse: dict[RelationType, RelationType] = {
     RelationType.R002i: RelationType.R002,
