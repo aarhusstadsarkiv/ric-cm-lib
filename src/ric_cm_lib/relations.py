@@ -330,8 +330,8 @@ class RelationType(Enum):
     R086 = 86
 
     @property
-    def inverse(self) -> Optional["RelationType"]:
-        return _inverse.get(self)
+    def inverse(self) -> "RelationType":
+        return _inverse.get(self, self)
 
     @property
     def narrower(self) -> list["RelationType"]:
