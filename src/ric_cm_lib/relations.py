@@ -16,162 +16,162 @@ __all__ = [
 
 class RelationType(Enum):
     """
-    :ivar R001: RiC-R001
-    :ivar R002: RiC-R002
-    :ivar R002i: RiC-R002i
-    :ivar R003: RiC-R003
-    :ivar R003i: RiC-R003i
-    :ivar R004: RiC-R004
-    :ivar R004i: RiC-R004i
-    :ivar R005: RiC-R005
-    :ivar R005i: RiC-R005i
-    :ivar R006: RiC-R006
-    :ivar R006i: RiC-R006i
-    :ivar R007: RiC-R007
-    :ivar R007i: RiC-R007i
-    :ivar R008: RiC-R008
-    :ivar R008i: RiC-R008i
-    :ivar R009: RiC-R009
-    :ivar R009i: RiC-R009i
-    :ivar R010: RiC-R010
-    :ivar R010i: RiC-R010i
-    :ivar R011: RiC-R011
-    :ivar R011i: RiC-R011i
-    :ivar R012: RiC-R012
-    :ivar R012i: RiC-R012i
-    :ivar R013: RiC-R013
-    :ivar R013i: RiC-R013i
-    :ivar R014: RiC-R014
-    :ivar R014i: RiC-R014i
-    :ivar R015: RiC-R015
-    :ivar R015i: RiC-R015i
-    :ivar R016: RiC-R016
-    :ivar R016i: RiC-R016i
-    :ivar R017: RiC-R017
-    :ivar R017i: RiC-R017i
-    :ivar R018: RiC-R018
-    :ivar R018i: RiC-R018i
-    :ivar R019: RiC-R019
-    :ivar R019i: RiC-R019i
-    :ivar R020: RiC-R020
-    :ivar R020i: RiC-R020i
-    :ivar R021: RiC-R021
-    :ivar R021i: RiC-R021i
-    :ivar R022: RiC-R022
-    :ivar R023: RiC-R023
-    :ivar R024: RiC-R024
-    :ivar R024i: RiC-R024i
-    :ivar R025: RiC-R025
-    :ivar R025i: RiC-R025i
-    :ivar R026: RiC-R026
-    :ivar R026i: RiC-R026i
-    :ivar R027: RiC-R027
-    :ivar R027i: RiC-R027i
-    :ivar R028: RiC-R028
-    :ivar R028i: RiC-R028i
-    :ivar R029: RiC-R029
-    :ivar R029i: RiC-R029i
-    :ivar R030: RiC-R030
-    :ivar R030i: RiC-R030i
-    :ivar R031: RiC-R031
-    :ivar R031i: RiC-R031i
-    :ivar R032: RiC-R032
-    :ivar R032i: RiC-R032i
-    :ivar R033: RiC-R033
-    :ivar R033i: RiC-R033i
-    :ivar R034: RiC-R034
-    :ivar R035: RiC-R035
-    :ivar R036: RiC-R036
-    :ivar R036i: RiC-R036i
-    :ivar R037: RiC-R037
-    :ivar R037i: RiC-R037i
-    :ivar R038: RiC-R038
-    :ivar R038i: RiC-R038i
-    :ivar R039: RiC-R039
-    :ivar R039i: RiC-R039i
-    :ivar R040: RiC-R040
-    :ivar R040i: RiC-R040i
-    :ivar R041: RiC-R041
-    :ivar R041i: RiC-R041i
-    :ivar R042: RiC-R042
-    :ivar R042i: RiC-R042i
+    :ivar R001: is related to
+    :ivar R002: has or had part
+    :ivar R002i: is or was part of
+    :ivar R003: has or had constituent
+    :ivar R003i: is or was constituent of
+    :ivar R004: has or had component
+    :ivar R004i: is or was component of
+    :ivar R005: has or had subdivision
+    :ivar R005i: is or was subdivision of
+    :ivar R006: has or had subevent
+    :ivar R006i: is or was subevent of
+    :ivar R007: contains or contained
+    :ivar R007i: is or was contained by
+    :ivar R008: precedes or preceded
+    :ivar R008i: follows or followed
+    :ivar R009: precedes in time
+    :ivar R009i: follows in time
+    :ivar R010: is original of
+    :ivar R010i: has original
+    :ivar R011: is draft of
+    :ivar R011i: has draft
+    :ivar R012: has copy
+    :ivar R012i: is copy of
+    :ivar R013: has reply
+    :ivar R013i: is reply to
+    :ivar R014: has or had derived instantiation
+    :ivar R014i: is or was derived from instantiation
+    :ivar R015: migrated into
+    :ivar R015i: migrated from
+    :ivar R016: has successor
+    :ivar R016i: is successor of
+    :ivar R017: has descendant
+    :ivar R017i: has ancestor
+    :ivar R018: has child
+    :ivar R018i: is child of
+    :ivar R019: has or had subject
+    :ivar R019i: is or was subject of
+    :ivar R020: has or had main subject
+    :ivar R020i: is or was main subject of
+    :ivar R021: describes or described
+    :ivar R021i: is or was described by
+    :ivar R022: is record resource associated with record resource
+    :ivar R023: has genetic link to record resource
+    :ivar R024: includes or included
+    :ivar R024i: is or was included in
+    :ivar R025: has or had instantiation
+    :ivar R025i: is or was instantiation of
+    :ivar R026: has provenance
+    :ivar R026i: is provenance of
+    :ivar R027: has creator
+    :ivar R027i: is creator of
+    :ivar R028: has accumulator
+    :ivar R028i: is accumulator of
+    :ivar R029: has receiver
+    :ivar R029i: is receiver of
+    :ivar R030: has collector
+    :ivar R030i: is collector of
+    :ivar R031: has sender
+    :ivar R031i: is sender of
+    :ivar R032: has addressee
+    :ivar R032i: is addressee of
+    :ivar R033: documents
+    :ivar R033i: documented by
+    :ivar R034: is instantiation associated with instantiation
+    :ivar R035: is functionally equivalent to
+    :ivar R036: has or had authority over
+    :ivar R036i: is or was under authority of
+    :ivar R037: is or was owner of
+    :ivar R037i: has or had owner
+    :ivar R038: is or was manager of
+    :ivar R038i: has or had manager
+    :ivar R039: is or was holder of
+    :ivar R039i:  has or had holder
+    :ivar R040: is or was holder of intellectual property rights of
+    :ivar R040i: has or had intellectual property rights holder
+    :ivar R041: is or was controller of
+    :ivar R041i: has or had controller
+    :ivar R042: is or was leader of
+    :ivar R042i: has or had leader
     :ivar R043: RiC-R043
-    :ivar R044: RiC-R044
-    :ivar R045: RiC-R045
-    :ivar R045i: RiC-R045i
-    :ivar R046: RiC-R046
-    :ivar R047: RiC-R047
-    :ivar R048: RiC-R048
-    :ivar R049: RiC-R049
-    :ivar R050: RiC-R050
-    :ivar R050i: RiC-R050i
-    :ivar R051: RiC-R051
-    :ivar R052: RiC-R052
-    :ivar R053: RiC-R053
-    :ivar R053i: RiC-R053i
-    :ivar R054: RiC-R054
-    :ivar R054i: RiC-R054i
-    :ivar R055: RiC-R055
-    :ivar R055i: RiC-R055i
-    :ivar R056: RiC-R056
-    :ivar R056i: RiC-R056i
-    :ivar R057: RiC-R057
-    :ivar R057i: RiC-R057i
-    :ivar R058: RiC-R058
-    :ivar R058i: RiC-R058i
-    :ivar R059: RiC-R059
-    :ivar R059i: RiC-R059i
-    :ivar R060: RiC-R060
-    :ivar R060i: RiC-R060i
-    :ivar R061: RiC-R061
-    :ivar R061i: RiC-R061i
-    :ivar R062: RiC-R062
-    :ivar R062i: RiC-R062i
-    :ivar R063: RiC-R063
-    :ivar R063i: RiC-R063i
-    :ivar R064: RiC-R064
-    :ivar R064i: RiC-R064i
-    :ivar R065: RiC-R065
-    :ivar R065i: RiC-R065i
-    :ivar R066: RiC-R066
-    :ivar R066i: RiC-R066i
-    :ivar R067: RiC-R067
-    :ivar R067i: RiC-R067i
-    :ivar R068: RiC-R068
-    :ivar R068i: RiC-R068i
-    :ivar R069: RiC-R069
-    :ivar R069i: RiC-R069i
-    :ivar R070: RiC-R070
-    :ivar R070i: RiC-R070i
-    :ivar R071: RiC-R071
-    :ivar R071i: RiC-R071i
-    :ivar R072: RiC-R072
-    :ivar R072i: RiC-R072i
-    :ivar R073: RiC-R073
-    :ivar R073i: RiC-R073i
-    :ivar R074: RiC-R074
-    :ivar R074i: RiC-R074i
-    :ivar R075: RiC-R075
-    :ivar R075i: RiC-R075i
-    :ivar R076: RiC-R076
-    :ivar R076i: RiC-R076i
-    :ivar R077: RiC-R077
-    :ivar R078: RiC-R078
-    :ivar R079: RiC-R079
-    :ivar R079i: RiC-R079i
-    :ivar R080: RiC-R080
-    :ivar R080i: RiC-R080i
-    :ivar R081: RiC-R081
-    :ivar R081i: RiC-R081i
-    :ivar R082: RiC-R082
-    :ivar R082i: RiC-R082i
-    :ivar R083: RiC-R083
-    :ivar R083i: RiC-R083i
-    :ivar R084: RiC-R084
-    :ivar R084i: RiC-R084i
-    :ivar R085: RiC-R085
-    :ivar R085i: RiC-R085i
-    :ivar R086: RiC-R086
+    :ivar R044: is agent associated with agent
+    :ivar R045: has or had subordinate
+    :ivar R045i: is or was subordinate to
+    :ivar R046: has or had work relation with
+    :ivar R047: has family association with
+    :ivar R048: has sibling
+    :ivar R049: has or had spouse
+    :ivar R050: knows of
+    :ivar R050i: known by
+    :ivar R051: knows
+    :ivar R052: has or had correspondent
+    :ivar R053: has or had teacher
+    :ivar R053i: has or had student
+    :ivar R054: occupies or occupied
+    :ivar R054i: is or was occupied by
+    :ivar R055: has or had member
+    :ivar R055i: is or was member of
+    :ivar R056: exists or existed in
+    :ivar R056i: has or had position
+    :ivar R057: is event associated with
+    :ivar R057i: is associated with event
+    :ivar R058: has or had participant
+    :ivar R058i: is or was participant in
+    :ivar R059: affects or affected
+    :ivar R059i: is or was affected by
+    :ivar R060: is or was performed by
+    :ivar R060i: performs or performed
+    :ivar R061: results or resulted in
+    :ivar R061i: results or resulted from
+    :ivar R062: is rule associated with
+    :ivar R062i: is associated with rule
+    :ivar R063: regulates or regulated
+    :ivar R063i: is or was regulated by
+    :ivar R064: is or was expressed by
+    :ivar R064i: expresses or expressed
+    :ivar R065: issued by
+    :ivar R065i: is responsible for issuing
+    :ivar R066: is or was enforced by
+    :ivar R066i: is or was responsible for enforcing
+    :ivar R067: authorizes
+    :ivar R067i: authorized by
+    :ivar R068: is date associated with
+    :ivar R068i: is associated with date
+    :ivar R069: is beginning date of
+    :ivar R069i: has beginning date
+    :ivar R070: is birth date of
+    :ivar R070i: has birth date
+    :ivar R071: is end date of
+    :ivar R071i: has end date
+    :ivar R072: is death date of
+    :ivar R072i: has death date
+    :ivar R073: is modification date of
+    :ivar R073i: has modification date
+    :ivar R074: is place associated with
+    :ivar R074i: is associated with place
+    :ivar R075: is or was location of
+    :ivar R075i: has or had location
+    :ivar R076: is or was jurisdiction of
+    :ivar R076i: has or had jurisdiction
+    :ivar R077: is or was adjacent to
+    :ivar R078: overlaps or overlapped
+    :ivar R079: has author
+    :ivar R079i: is author of
+    :ivar R080: is creation date of
+    :ivar R080i: has creation date
+    :ivar R081: is or was creation date of all members of
+    :ivar R081i: has or had all members with creation date
+    :ivar R082: is or was creation date of some members of
+    :ivar R082i: has or had some members with creation date
+    :ivar R083: is or was creation date of most members of
+    :ivar R083i: has or had most members with creation date
+    :ivar R084: is date of occurrence of
+    :ivar R084i: occurred at date
+    :ivar R085: is within
+    :ivar R085i: has within
+    :ivar R086: intersects
     :ivar R086i: RiC-R086i
     """
 
