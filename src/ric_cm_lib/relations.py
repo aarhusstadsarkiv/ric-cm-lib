@@ -95,7 +95,6 @@ class RelationType(Enum):
     :ivar R041i: has or had controller
     :ivar R042: is or was leader of
     :ivar R042i: has or had leader
-    :ivar R043: RiC-R043
     :ivar R044: is agent associated with agent
     :ivar R045: has or had subordinate
     :ivar R045i: is or was subordinate to
@@ -172,7 +171,6 @@ class RelationType(Enum):
     :ivar R085: is within
     :ivar R085i: has within
     :ivar R086: intersects
-    :ivar R086i: RiC-R086i
     """
 
     R001 = 1
@@ -254,7 +252,6 @@ class RelationType(Enum):
     R041i = -41
     R042 = 42
     R042i = -42
-    R043 = 43
     R044 = 44
     R045 = 45
     R045i = -45
@@ -331,7 +328,6 @@ class RelationType(Enum):
     R085 = 85
     R085i = -85
     R086 = 86
-    R086i = -86
 
     @property
     def inverse(self) -> Optional["RelationType"]:
@@ -424,7 +420,6 @@ _inverse: dict[RelationType, RelationType] = {
     RelationType.R083i: RelationType.R083,
     RelationType.R084i: RelationType.R084,
     RelationType.R085i: RelationType.R085,
-    RelationType.R086i: RelationType.R086,
     RelationType.R002: RelationType.R002i,
     RelationType.R003: RelationType.R003i,
     RelationType.R004: RelationType.R004i,
@@ -495,7 +490,6 @@ _inverse: dict[RelationType, RelationType] = {
     RelationType.R083: RelationType.R083i,
     RelationType.R084: RelationType.R084i,
     RelationType.R085: RelationType.R085i,
-    RelationType.R086: RelationType.R086i,
 }
 _narrow: dict[RelationType, list[RelationType]] = {
     RelationType.R001: [
@@ -620,7 +614,6 @@ _narrow: dict[RelationType, list[RelationType]] = {
         RelationType.R042,
     ],
     RelationType.R042: [],
-    RelationType.R043: [],
     RelationType.R044: [
         RelationType.R045,
         RelationType.R045i,
