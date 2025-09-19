@@ -1,7 +1,6 @@
 from dataclasses import dataclass
 from enum import Enum
 from typing import Literal
-from typing import Optional
 
 from ric_cm_lib import things
 from ric_cm_lib.types import FreeText
