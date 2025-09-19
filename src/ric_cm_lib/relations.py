@@ -351,6 +351,14 @@ class RelationType(Enum):
     def label(self) -> str:
         return _labels[self]
 
+    @property
+    def domain(self) -> list[type[things.Thing]]:
+        return d[0] if (d := _domains.get(self)) else self.inverse.range
+
+    @property
+    def range(self) -> list[type[things.Thing]]:
+        return d[1] if (d := _domains.get(self)) else self.inverse.domain
+
 
 _labels: dict[RelationType, str] = {
     RelationType.R001: "is related to",
@@ -508,6 +516,141 @@ _labels: dict[RelationType, str] = {
     RelationType.R085: "is within",
     RelationType.R085i: "has within",
     RelationType.R086: "intersects",
+}
+_domains: dict[RelationType, tuple[list[type[things.Thing]], list[type[things.Thing]]]] = {
+    RelationType.R001: ([things.Thing], [things.Thing]),
+    RelationType.R002: ([things.Thing], [things.Thing]),
+    RelationType.R003: (
+        [things.records_resources.Record, things.records_resources.RecordPart],
+        [things.records_resources.Record, things.records_resources.RecordPart],
+    ),
+    RelationType.R004: ([things.instantiations.Instantiation], [things.instantiations.Instantiation]),
+    RelationType.R005: ([things.agents.groups.Group], [things.agents.groups.Group]),
+    RelationType.R006: ([things.events.Event], [things.events.Event]),
+    RelationType.R007: ([things.places.Place], [things.places.Place]),
+    RelationType.R008: ([things.Thing], [things.Thing]),
+    RelationType.R009: ([things.Thing], [things.Thing]),
+    RelationType.R010: (
+        [things.records_resources.Record, things.records_resources.RecordPart],
+        [things.records_resources.Record, things.records_resources.RecordPart],
+    ),
+    RelationType.R011: ([things.records_resources.Record], [things.records_resources.Record]),
+    RelationType.R012: ([things.records_resources.RecordResource], [things.records_resources.RecordResource]),
+    RelationType.R013: ([things.records_resources.RecordResource], [things.records_resources.RecordResource]),
+    RelationType.R014: ([things.instantiations.Instantiation], [things.instantiations.Instantiation]),
+    RelationType.R015: ([things.instantiations.Instantiation], [things.instantiations.Instantiation]),
+    RelationType.R016: ([things.agents.agent.Agent], [things.agents.agent.Agent]),
+    RelationType.R017: ([things.agents.Person], [things.agents.Person]),
+    RelationType.R018: ([things.agents.Person], [things.agents.Person]),
+    RelationType.R019: ([things.records_resources.RecordResource], [things.Thing]),
+    RelationType.R020: ([things.records_resources.RecordResource], [things.Thing]),
+    RelationType.R021: ([things.records_resources.RecordResource], [things.Thing]),
+    RelationType.R022: ([things.records_resources.RecordResource], [things.records_resources.RecordResource]),
+    RelationType.R023: ([things.records_resources.RecordResource], [things.records_resources.RecordResource]),
+    RelationType.R024: (
+        [things.records_resources.RecordSet],
+        [things.records_resources.Record, things.records_resources.RecordSet],
+    ),
+    RelationType.R025: ([things.records_resources.RecordResource], [things.instantiations.Instantiation]),
+    RelationType.R026: (
+        [things.records_resources.RecordResource, things.instantiations.Instantiation],
+        [things.agents.agent.Agent],
+    ),
+    RelationType.R027: (
+        [things.records_resources.RecordResource, things.instantiations.Instantiation],
+        [things.agents.agent.Agent],
+    ),
+    RelationType.R028: (
+        [things.records_resources.RecordResource, things.instantiations.Instantiation],
+        [things.agents.agent.Agent],
+    ),
+    RelationType.R029: (
+        [things.records_resources.RecordResource, things.instantiations.Instantiation],
+        [things.agents.agent.Agent],
+    ),
+    RelationType.R030: (
+        [things.records_resources.RecordResource, things.instantiations.Instantiation],
+        [things.agents.agent.Agent],
+    ),
+    RelationType.R031: (
+        [things.records_resources.RecordResource, things.instantiations.Instantiation],
+        [things.agents.agent.Agent],
+    ),
+    RelationType.R032: (
+        [things.records_resources.RecordResource, things.instantiations.Instantiation],
+        [things.agents.agent.Agent],
+    ),
+    RelationType.R033: (
+        [things.records_resources.RecordResource, things.instantiations.Instantiation],
+        [things.agents.agent.Agent],
+    ),
+    RelationType.R034: ([things.instantiations.Instantiation], [things.instantiations.Instantiation]),
+    RelationType.R035: ([things.instantiations.Instantiation], [things.instantiations.Instantiation]),
+    RelationType.R036: ([things.agents.agent.Agent], [things.Thing]),
+    RelationType.R037: ([things.agents.groups.Group, things.agents.Person, things.agents.Position], [things.Thing]),
+    RelationType.R038: (
+        [things.agents.agent.Agent],
+        [things.records_resources.RecordResource, things.instantiations.Instantiation],
+    ),
+    RelationType.R039: (
+        [things.agents.agent.Agent],
+        [things.records_resources.RecordResource, things.instantiations.Instantiation],
+    ),
+    RelationType.R040: (
+        [things.agents.groups.Group, things.agents.Person, things.agents.Position],
+        [things.records_resources.RecordResource, things.instantiations.Instantiation],
+    ),
+    RelationType.R041: ([things.agents.agent.Agent], [things.agents.agent.Agent]),
+    RelationType.R042: ([things.agents.Person], [things.agents.groups.Group]),
+    RelationType.R044: ([things.agents.agent.Agent], [things.agents.agent.Agent]),
+    RelationType.R045: ([things.agents.agent.Agent], [things.agents.agent.Agent]),
+    RelationType.R046: ([things.agents.agent.Agent], [things.agents.agent.Agent]),
+    RelationType.R047: ([things.agents.Person], [things.agents.Person]),
+    RelationType.R048: ([things.agents.Person], [things.agents.Person]),
+    RelationType.R049: ([things.agents.Person], [things.agents.Person]),
+    RelationType.R050: ([things.agents.Person], [things.agents.Person]),
+    RelationType.R051: ([things.agents.Person], [things.agents.Person]),
+    RelationType.R052: ([things.agents.Person], [things.agents.Person]),
+    RelationType.R053: ([things.agents.Person], [things.agents.Person]),
+    RelationType.R054: ([things.agents.Person], [things.agents.Position]),
+    RelationType.R055: ([things.agents.groups.Group], [things.agents.Person]),
+    RelationType.R056: ([things.agents.Position], [things.agents.groups.Group]),
+    RelationType.R057: ([things.events.Event], [things.Thing]),
+    RelationType.R058: ([things.events.Event], [things.Thing]),
+    RelationType.R059: ([things.events.Event], [things.Thing]),
+    RelationType.R060: ([things.events.Activity], [things.agents.agent.Agent]),
+    RelationType.R061: ([things.events.Event], [things.Thing]),
+    RelationType.R062: ([things.rules.Rule], [things.Thing]),
+    RelationType.R063: ([things.rules.Rule], [things.Thing]),
+    RelationType.R064: ([things.rules.Rule], [things.records_resources.RecordResource]),
+    RelationType.R065: ([things.rules.Rule], [things.agents.agent.Agent]),
+    RelationType.R066: ([things.rules.Rule], [things.agents.agent.Agent]),
+    RelationType.R067: ([things.rules.Mandate], [things.agents.agent.Agent]),
+    RelationType.R068: ([things.dates.Date], [things.Thing]),
+    RelationType.R069: ([things.dates.Date], [things.Thing]),
+    RelationType.R070: ([things.dates.Date], [things.agents.Person]),
+    RelationType.R071: ([things.dates.Date], [things.Thing]),
+    RelationType.R072: ([things.dates.Date], [things.agents.Person]),
+    RelationType.R073: ([things.dates.Date], [things.Thing]),
+    RelationType.R074: ([things.places.Place], [things.Thing]),
+    RelationType.R075: ([things.places.Place], [things.Thing]),
+    RelationType.R076: ([things.places.Place], [things.agents.agent.Agent]),
+    RelationType.R077: ([things.places.Place], [things.places.Place]),
+    RelationType.R078: ([things.places.Place], [things.places.Place]),
+    RelationType.R079: (
+        [things.records_resources.Record],
+        [things.agents.Person, things.agents.groups.Group, things.agents.Position],
+    ),
+    RelationType.R080: (
+        [things.dates.Date],
+        [things.records_resources.RecordResource, things.instantiations.Instantiation],
+    ),
+    RelationType.R081: ([things.dates.Date], [things.records_resources.RecordSet]),
+    RelationType.R082: ([things.dates.Date], [things.records_resources.RecordSet]),
+    RelationType.R083: ([things.dates.Date], [things.records_resources.RecordSet]),
+    RelationType.R084: ([things.dates.Date], [things.events.Event]),
+    RelationType.R085: ([things.dates.Date], [things.dates.Date]),
+    RelationType.R086: ([things.dates.Date], [things.dates.Date]),
 }
 _inverse: dict[RelationType, RelationType] = {
     RelationType.R002i: RelationType.R002,
