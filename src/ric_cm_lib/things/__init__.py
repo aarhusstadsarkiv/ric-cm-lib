@@ -7,9 +7,11 @@ from . import instantiations
 from . import places
 from . import records_resources
 from . import rules
+from .thing import Thing
 
 __all__ = [
     "EntityDomain",
+    "Thing",
     "agents",
     "dates",
     "events",
