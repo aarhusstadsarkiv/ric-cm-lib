@@ -1145,7 +1145,7 @@ class Relation:
     date_of_relation: FreeText | ModelBasedText | RuleBasedText  # RA02
     description_of_relation: FreeText  # RA03
     identifier_of_relation: FreeText | ModelBasedText | RuleBasedText  # RA04
-    source_of_relation: FreeText | ModelBasedText  # https://www.ica.org/standards/RiC/ontology#relationSource
+    source_of_relation: list[FreeText | ModelBasedText]  # https://www.ica.org/standards/RiC/ontology#relationSource
     place_of_relation: str  # RA06
 
     relation_type: RelationType
